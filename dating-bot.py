@@ -46,7 +46,7 @@ def load_token() -> str:
     if token:
         return token
 
-    for env_file_path in (".env", ".env.example"):
+    for env_file_path in (".env",):
         token_from_file = _read_bot_token_from_env_file(env_file_path)
         if token_from_file:
             return token_from_file
